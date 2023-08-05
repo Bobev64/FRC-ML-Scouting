@@ -19,7 +19,7 @@ fi
 
 # -count_packets is way faster than -count_frames, although it *technically* doesn't count frames
 totalFrames="$(ffprobe -v error -select_streams v:0 -count_packets \
-  			 -show_entries stream=nb_read_packets -of csv=p=0 $1)"
+				-show_entries stream=nb_read_packets -of csv=p=0 $1)"
 
 echo "TOTAL FRAME COUNT: $totalFrames"
 
@@ -28,4 +28,5 @@ echo "TOTAL FRAME COUNT: $totalFrames"
 frameStep=$((totalFrames / imgCount))
 
 # Output frames from video with frame number
-ffmpeg -i "$1" -vf "select=not(mod(n\,$frameStep))" -fps_mode passthrough "${destinationDir}/${fileName}_frame_%d.jpg"
+ffmpeg -i "$1" -vf "select=not(mod(n\,$frameStep))" -fps_mode \
+				passthrough "${destinationDir}/${fileName}_frame_%d.jpg"
