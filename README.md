@@ -1,4 +1,4 @@
-# Horus
+# FRC ML Scouting
 
 This repo is an attempt at using object detection from VODs provided by [The Blue Alliance](https://www.thebluealliance.com/) to gain statistical insights beyond the conventional FIRST API. 
 
