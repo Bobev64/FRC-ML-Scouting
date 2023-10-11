@@ -12,9 +12,10 @@ cap = cv2.VideoCapture(video_path)
 
 videoOut= None
 video = cv2.VideoWriter(videoOut,cv2.VideoWriter_fourcc(*'MPEG'),30,(1080,1920))
+
 # Loop through the video frames
 while (True):
-    # Read a frame from the video
+    # Read a frame from the video, return whether a frame can be read
     success, frame = cap.read()
 
     if success:
@@ -27,6 +28,7 @@ while (True):
         # write the annotated frame to mp4 file
         video.write(annotated_frame)
         cv2.imshow("output", annotated_frame)
+    # Press the key "a" to quit program
     if cv2.waitKey(33) == ord('a'):
         break
 
