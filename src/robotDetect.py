@@ -4,17 +4,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # TODO: Replace applicable variable assignments of None with robust path assignments
-mode = 2
+mode = 1
 
 RED_ROBOT = 0.0
 BLUE_ROBOT = 1.0
 
 # Load the YOLOv8 model
-modelPath = None
+modelPath = "/home/bob/Code/FRC-ML-Scouting/runs/detect/train2/weights/best.pt"
 model = YOLO(modelPath)
 
 # Open the video file
-video_path = None
+video_path = "/home/bob/Code/FRC-ML-Scouting/MIKET2-F3.mp4"
 video = cv2.VideoCapture(video_path)
 
 def outputInferenceVid(cap):
