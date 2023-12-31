@@ -10,4 +10,6 @@ The dataset can be found [here](https://app.roboflow.com/robotdetect/robot-detec
 
 Programs require you to input absolute paths at the moment. Currently only supports running on Ubuntu, likely not too hard to hack it to work on other operating systems though.
 
-I reccommend looking over the [Yolov8 docs](https://docs.ultralytics.com/) for more info on how training and implementation of the neural network is handled.
+I recommend looking over the [Yolov8 docs](https://docs.ultralytics.com/) for more info on how training and implementation of the neural network is handled.
+
+**NOTE:** The current requirements.txt is broken.

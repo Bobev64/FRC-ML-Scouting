@@ -17,4 +17,4 @@ else:
 # modelPath assignment should be a .yaml including content for the dataset you want to train off of
 modelPath = "/home/bob/Code/FRC-ML-Scouting/res/dataset/data.yaml"
 model = YOLO('yolov8m.yaml')
-model.train(data=modelPath, epochs=130, imgsz=640)
+model.train(data=modelPath, epochs=150, imgsz=640)
