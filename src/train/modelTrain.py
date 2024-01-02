@@ -1,4 +1,5 @@
 from ultralytics import YOLO
+from torch import cuda
 """
 import torch
 cudaAvailability = torch.cuda.is_available()
@@ -15,6 +16,8 @@ else:
 
 # TODO: Replace modelPath assignment of None with robust model path assignment
 # modelPath assignment should be a .yaml including content for the dataset you want to train off of
-modelPath = "/home/bob/Code/FRC-ML-Scouting/res/dataset/data.yaml"
-model = YOLO('yolov8m.yaml')
-model.train(data=modelPath, epochs=150, imgsz=640)
+dataPath = None
+model = YOLO('yolov8l.pt')
+
+# NOTE: Batch size set smaller currently for the larger model and hardware constraints. This should be changed back to its default later.
+model.train(data=dataPath, epochs=150, imgsz=640, batch=12)

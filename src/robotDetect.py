@@ -10,11 +10,11 @@ RED_ROBOT = 0.0
 BLUE_ROBOT = 1.0
 
 # Load the YOLOv8 model
-modelPath = "/home/bob/Code/FRC-ML-Scouting/runs/detect/train2/weights/best.pt"
+modelPath = None
 model = YOLO(modelPath)
 
 # Open the video file
-video_path = "/home/bob/Code/FRC-ML-Scouting/MIKET2-F3.mp4"
+video_path = None
 video = cv2.VideoCapture(video_path)
 
 def outputInferenceVid(cap):
