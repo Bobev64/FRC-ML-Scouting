@@ -1,7 +1,13 @@
 from dataOrchestrate import DataOrchestrate
 data = DataOrchestrate()
 
-videoUrls = data.getPlaylistVideoLinks("https://www.youtube.com/playlist?list=PLrEBilNS0Pas73_4m5F837k-Ngc8Lh_Tp")
+# Replace with link of desired playlist to pull frames from
+playlistUrl = None
+videoUrls = data.getPlaylistVideoLinks(playlistUrl)
 
 for url in videoUrls:
     data.youtubeFrameExtract(url)
+
+# Replace with absolute path to desired .pt YOLO model
+modelDir = None
+data.autoAnnotate(modelDir)
